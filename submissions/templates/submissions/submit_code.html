@@ -1,0 +1,7 @@
+<!-- templates/submissions/submit_code.html -->
+<h2>Submit Code</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>

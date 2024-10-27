@@ -1,0 +1,19 @@
+<h1>All Submissions</h1>
+<table>
+    <tr>
+        <th>Student Name</th>
+        <th>Email</th>
+        <th>Submitted At</th>
+        <th>Result</th>
+        <th>View</th>
+    </tr>
+    {% for submission in submissions %}
+    <tr>
+        <td>{{ submission.student_name }}</td>
+        <td>{{ submission.student_email }}</td>
+        <td>{{ submission.submitted_at }}</td>
+        <td>{{ submission.result|linebreaks }}</td>
+        <td><a href="{% url 'submission_result' submission.id %}">View</a></td>
+    </tr>
+    {% endfor %}
+</table>

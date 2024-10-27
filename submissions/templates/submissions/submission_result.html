@@ -1,0 +1,6 @@
+<h1>Submission Result</h1>
+<p><strong>Name:</strong> {{ submission.student_name }}</p>
+<p><strong>Email:</strong> {{ submission.student_email }}</p>
+<p><strong>Result:</strong></p>
+<pre>{{ submission.result }}</pre>
+<a href="{% url 'view_submissions' %}">Back to All Submissions</a>
